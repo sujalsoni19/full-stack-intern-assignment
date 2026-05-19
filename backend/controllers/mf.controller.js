@@ -78,9 +78,30 @@ const deletefromWatchlist = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, {}, "item deleted successfully"));
 });
 
+const getFundDetails = asyncHandler(async (req, res) => {
+  const { schemeCode } = req.params;
+
+  if (!schemeCode) {
+    throw new ApiError(400, "Scheme code required");
+  }
+
+  const response = await api.get(`https://api.mfapi.in/mf/${schemeCode}`);
+
+  if (!response.data) {
+    throw new ApiError(404, "Fund not found");
+  }
+
+  return res
+    .status(200)
+    .json(
+      new ApiResponse(200, response.data, "Fund details fetched successfully"),
+    );
+});
+
 export {
   searchMutualFund,
   addtoWatchlist,
   getWatchlistItems,
   deletefromWatchlist,
+  getFundDetails,
 };

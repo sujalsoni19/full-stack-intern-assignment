@@ -12,9 +12,9 @@ app.use(
 
 app.use(express.json({ limit: "16kb" }));
 
-// import userRouter from "./routes/user.route.js";
+import Router from "./routes/mf.route.js";
 
-// //http://localhost:4000/api/v1/users/register
-// app.use("/api/users", userRouter);
+//http://localhost:4000
+app.use("/", Router);
 
 export default app;

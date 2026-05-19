@@ -15,4 +15,4 @@ const watchListSchema = new Schema(
   { timestamps: true },
 );
 
-const WatchList = mongoose.model("WatchList", watchListSchema);
+export const WatchList = mongoose.model("WatchList", watchListSchema);

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="64" viewBox="0 0 252 64" role="img" aria-labelledby="title desc">
+  <title id="title">FundScout</title>
+  <desc id="desc">FundScout logo with a compass lens and rising fund chart.</desc>
+  <defs>
+    <linearGradient id="badge" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E"/>
+      <stop offset="0.48" stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="needle" x1="19" x2="45" y1="44" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCFCE7"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#badge)"/>
+    <circle cx="32" cy="32" r="15.5" fill="#0F172A" opacity="0.14"/>
+    <circle cx="32" cy="32" r="13.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.86" stroke-width="3"/>
+    <path fill="url(#needle)" d="M40.8 20.7a1.6 1.6 0 0 1 2.1 2.1l-7 18a2.7 2.7 0 0 1-1.6 1.6l-10 3.9a1.6 1.6 0 0 1-2.1-2.1l3.9-10a2.7 2.7 0 0 1 1.6-1.6l13.1-11.9Z"/>
+    <path fill="#0F766E" d="m31 35.5 5.9-5.9-3.7 9.3-4.1 1.6 1.9-5Z" opacity="0.9"/>
+    <path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 36.5h5.2l4.3-6.5 4.9 3.7 8.5-11"/>
+  </g>
+  <text x="72" y="41.5" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32" font-weight="800" letter-spacing="0">
+    Fund<tspan fill="#2563EB">Scout</tspan>
+  </text>
+  <path fill="#64748B" d="M75 49h115v3H75z" opacity="0.12"/>
+</svg>

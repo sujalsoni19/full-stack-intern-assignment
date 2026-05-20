@@ -11,7 +11,7 @@ const searchMutualFund = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Search query is required");
   }
 
-  const response = await api.get(`https://api.mfapi.in/mf/search?q=${query}`);
+  const response = await api.get(`/mf/search?q=${query}`);
 
   if (!response.data || response.data.length === 0) {
     throw new ApiError(404, "Couldn't find matching results");
@@ -85,7 +85,7 @@ const getFundDetails = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Scheme code required");
   }
 
-  const response = await api.get(`https://api.mfapi.in/mf/${schemeCode}`);
+  const response = await api.get(`/mf/${schemeCode}`);
 
   if (!response.data) {
     throw new ApiError(404, "Fund not found");

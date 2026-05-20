@@ -13,3 +13,6 @@ export const getWatchlistItems = () => api.get("/api/watchlist");
 
 export const deleteWatchListItem = (schemeCode) =>
   api.delete(`/api/watchlist/${schemeCode}`);
+
+export const getFundDetails = (schemeCode) =>
+  api.get(`/api/watchlist/${schemeCode}`);
